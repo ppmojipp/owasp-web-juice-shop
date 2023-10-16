@@ -1,0 +1,12 @@
+version: '3.7'
+services:
+    juiceshop:
+        image: juice-shop:v15.2.1
+        privileged: true
+        user: root
+        ports:
+            - 80:3000
+        container_name: juice-shop
+        volumes:
+            - /var/run/docker.sock:/var/run/docker.sock
+            - /usr/local/bin/docker:/usr/local/bin/docker
